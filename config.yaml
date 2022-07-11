@@ -14,7 +14,7 @@ namespaces:
   skos: http://www.w3.org/2004/02/skos/core#
   xhv: http://www.w3.org/1999/xhtml/vocab#
 input:
-  file: core-location-ap.ttl
+  folder: input
   format: ttl
   shapestart: "#"
   shapeend: "Shape"
