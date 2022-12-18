@@ -6,6 +6,5 @@
         owl:ObjectProperty ;
     rdfs:label "identifies"@en ;
     rdfs:comment "The entity that is referenced by the Identifier."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
-    rdfs:range <http://www.w3.org/ns/legal#LegalEntity> .
+    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
 

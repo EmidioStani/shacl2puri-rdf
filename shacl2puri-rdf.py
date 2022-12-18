@@ -37,18 +37,15 @@ g = read_files(g, folder)
 # print(len(g))
 #g.parse(config['input']['file'] , format=config['input']['format'])
 
+#  ?path rdfs:range ?type .
 sparql_datatype_properties = """
     CONSTRUCT {
         ?path rdf:type rdf:Property .
         ?path rdf:type owl:DatatypeProperty .
-        ?path rdfs:range ?type .
+
         ?path rdfs:comment ?desc .
         ?path rdfs:label ?name .
         ?path rdfs:isDefinedBy <http://data.europa.eu/m8g> .
-
-        ?class rdf:type owl:Class .
-        ?class rdfs:comment ?classdesc .
-        ?class rdfs:label ?classname .
 
     }
     WHERE {
@@ -70,12 +67,12 @@ sparql_datatype_properties = """
 
     }
 """
-
+#  ?relpath rdfs:range ?relclass .
 sparql_object_properties = """
     CONSTRUCT {
         ?relpath rdf:type rdf:Property .
         ?relpath rdf:type owl:ObjectProperty .
-        ?relpath rdfs:range ?relclass .
+
         ?relpath rdfs:comment ?reldesc .
         ?relpath rdfs:label ?relname .
         ?relpath rdfs:isDefinedBy <http://data.europa.eu/m8g> .
@@ -120,8 +117,8 @@ for triple in qres:
     goutput.add(triple)
 for triple in qres2:        
     goutput.add(triple)
-for triple in qres3:        
-    goutput.add(triple)
+# for triple in qres3:        
+    # goutput.add(triple)
 goutput.serialize(destination='output.ttl', format='turtle')
 
 sparql_select_subjects = """
