@@ -2,9 +2,63 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://data.europa.eu/m8g/identifies> a rdf:Property,
+<http://data.europa.eu/m8g/adminUnit> a rdf:Property,
         owl:ObjectProperty ;
-    rdfs:label "identifies"@en ;
-    rdfs:comment "The entity that is referenced by the Identifier."@en ;
+    rdfs:label "administrative unit"@en ;
+    rdfs:comment "The adminUnit relationship links an Address with the Administrative Unit class."@en ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+
+<http://data.europa.eu/m8g/code> a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "code"@en ;
+    rdfs:comment "The classification of the administrative unit."@en ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+
+<http://data.europa.eu/m8g/coordinates> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "coordinates"@en ;
+    rdfs:comment "	A list of geographic coordinates that define the extent of the Geometry."@en ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+
+<http://data.europa.eu/m8g/crs> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "crs"@en ;
+    rdfs:comment "An identifier for the coordinate reference system."@en ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+
+<http://data.europa.eu/m8g/geometryType> a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "geometry type"@en ;
+    rdfs:comment "The classification of the Geometry."@en ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+
+<http://data.europa.eu/m8g/latitude> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "latitude"@en ;
+    rdfs:comment "The geographic coordinate that specifies the north / south position of the Geomerty on the Earth's surface."@en ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+
+<http://data.europa.eu/m8g/level> a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "level"@en ;
+    rdfs:comment "The level of the administrative unit in the hierarchy."@en ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+
+<http://data.europa.eu/m8g/location> a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "location"@en ;
+    rdfs:comment "Associates any Resource with the corresponding Location."@en ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+
+<http://data.europa.eu/m8g/longitude> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "longitude"@en ;
+    rdfs:comment "The geographic coordinate that specifies the east / west position of the Geometry on the Earth's surface."@en ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+
+<http://data.europa.eu/m8g/registeredAddress> a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "registered address"@en ;
+    rdfs:comment "The registered address relationship links a Resource with the legally registered Address."@en ;
     rdfs:isDefinedBy <http://data.europa.eu/m8g> .
 
