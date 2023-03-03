@@ -143,6 +143,7 @@ for row in qsubject_list:
     tempgraph.serialize(destination= filepath + '.ttl', format='turtle')
     tempgraph.serialize(destination= filepath + '.nt', format='nt')
     tempgraph.serialize(destination= filepath + '.rdf', format='xml')
+    tempgraph.serialize(destination= filepath + '.jsonld', format='json-ld')
 
 
 
