@@ -2,63 +2,123 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://data.europa.eu/m8g/adminUnit> a rdf:Property,
-        owl:ObjectProperty ;
-    rdfs:label "administrative unit"@en ;
-    rdfs:comment "The adminUnit relationship links an Address with the Administrative Unit class."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
-
-<http://data.europa.eu/m8g/code> a rdf:Property,
-        owl:ObjectProperty ;
-    rdfs:label "code"@en ;
-    rdfs:comment "The classification of the administrative unit."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
-
-<http://data.europa.eu/m8g/coordinates> a rdf:Property,
+<http://data.europa.eu/m8g/accessibility> a rdf:Property,
         owl:DatatypeProperty ;
-    rdfs:label "coordinates"@en ;
-    rdfs:comment "	A list of geographic coordinates that define the extent of the Geometry."@en ;
+    rdfs:label "accessibility"@en ;
+    rdfs:comment "Information about how the Public Event can be approached, reached or entered, in particular for people with special needs."@en ;
     rdfs:isDefinedBy <http://data.europa.eu/m8g> .
 
-<http://data.europa.eu/m8g/crs> a rdf:Property,
+<http://data.europa.eu/m8g/audience> a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "audience"@en ;
+    rdfs:comment "The target group of people for whom the Public Event is created."@en ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+
+<http://data.europa.eu/m8g/contactPage> a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "contact page"@en ;
+    rdfs:comment "A web page that could be used to reach out the Contact Point."@en ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+
+<http://data.europa.eu/m8g/contactPoint> a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "contact point"@en ;
+    rdfs:comment "The main contact information of the resource."@en ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+
+<http://data.europa.eu/m8g/email> a rdf:Property,
         owl:DatatypeProperty ;
-    rdfs:label "crs"@en ;
-    rdfs:comment "An identifier for the coordinate reference system."@en ;
+    rdfs:label "has email"@en ;
+    rdfs:comment "An electronic address through which the Contact Point can be contacted."@en ;
     rdfs:isDefinedBy <http://data.europa.eu/m8g> .
 
-<http://data.europa.eu/m8g/geometryType> a rdf:Property,
-        owl:ObjectProperty ;
-    rdfs:label "geometry type"@en ;
-    rdfs:comment "The classification of the Geometry."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
-
-<http://data.europa.eu/m8g/latitude> a rdf:Property,
+<http://data.europa.eu/m8g/eventNumber> a rdf:Property,
         owl:DatatypeProperty ;
-    rdfs:label "latitude"@en ;
-    rdfs:comment "The geographic coordinate that specifies the north / south position of the Geomerty on the Earth's surface."@en ;
+    rdfs:label "event number"@en ;
+    rdfs:comment "The sequence position of the Public Event."@en ;
     rdfs:isDefinedBy <http://data.europa.eu/m8g> .
 
-<http://data.europa.eu/m8g/level> a rdf:Property,
+<http://data.europa.eu/m8g/format> a rdf:Property,
         owl:ObjectProperty ;
-    rdfs:label "level"@en ;
-    rdfs:comment "The level of the administrative unit in the hierarchy."@en ;
+    rdfs:label "format"@en ;
+    rdfs:comment "A plan of organisation or arrangement of the Public Event."@en ;
     rdfs:isDefinedBy <http://data.europa.eu/m8g> .
 
-<http://data.europa.eu/m8g/location> a rdf:Property,
+<http://data.europa.eu/m8g/frequency> a rdf:Property,
         owl:ObjectProperty ;
-    rdfs:label "location"@en ;
-    rdfs:comment "Associates any Resource with the corresponding Location."@en ;
+    rdfs:label "frequency"@en ;
+    rdfs:comment "The recurrence of an instant or period."@en ;
     rdfs:isDefinedBy <http://data.europa.eu/m8g> .
 
-<http://data.europa.eu/m8g/longitude> a rdf:Property,
+<http://data.europa.eu/m8g/hasNextEvent> a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "has next event"@en ;
+    rdfs:comment "The Public Event that comes after this one."@en ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+
+<http://data.europa.eu/m8g/hasParticipant> a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "has participant"@en ;
+    rdfs:comment "The Agent involved in the Participation."@en ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+
+<http://data.europa.eu/m8g/hasParticipation> a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "has participation"@en ;
+    rdfs:comment "The way how a resource is organized."@en ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+
+<http://data.europa.eu/m8g/hasPreviousEvent> a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "has previous event"@en ;
+    rdfs:comment "The Public Event that comes before this one."@en ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+
+<http://data.europa.eu/m8g/openingHours> a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "opening hours"@en ;
+    rdfs:comment "The time at which the Contact Point is normally available."@en ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+
+<http://data.europa.eu/m8g/parentEvent> a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "parent event"@en ;
+    rdfs:comment "A relation to another Public Event that encompasses it."@en ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+
+<http://data.europa.eu/m8g/participates> a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "participates"@en ;
+    rdfs:comment "The participation in which an Agent is involved."@en ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+
+<http://data.europa.eu/m8g/registrationPage> a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "registration page"@en ;
+    rdfs:comment "A web page that provides means to attend the Public Event."@en ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+
+<http://data.europa.eu/m8g/role> a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "role"@en ;
+    rdfs:comment "The function of an Agent within a Participation."@en ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+
+<http://data.europa.eu/m8g/specialOpeningHoursSpecification> a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "availability restriction"@en ;
+    rdfs:comment "The time during which the Contact Point is not available."@en ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+
+<http://data.europa.eu/m8g/subEvent> a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "sub event"@en ;
+    rdfs:comment "A relation towards another Public Event that belong to it."@en ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+
+<http://data.europa.eu/m8g/telephone> a rdf:Property,
         owl:DatatypeProperty ;
-    rdfs:label "longitude"@en ;
-    rdfs:comment "The geographic coordinate that specifies the east / west position of the Geometry on the Earth's surface."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
-
-<http://data.europa.eu/m8g/registeredAddress> a rdf:Property,
-        owl:ObjectProperty ;
-    rdfs:label "registered address"@en ;
-    rdfs:comment "The registered address relationship links a Resource with the legally registered Address."@en ;
+    rdfs:label "has telephone"@en ;
+    rdfs:comment "A telephone number through which the Contact Point can be contacted."@en ;
     rdfs:isDefinedBy <http://data.europa.eu/m8g> .
 
