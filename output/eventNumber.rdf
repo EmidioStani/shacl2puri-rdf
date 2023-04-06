@@ -5,9 +5,9 @@
 >
   <rdf:Description rdf:about="http://data.europa.eu/m8g/eventNumber">
     <rdfs:comment xml:lang="en">The sequence position of the Public Event.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g"/>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:label xml:lang="en">event number</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
 </rdf:RDF>

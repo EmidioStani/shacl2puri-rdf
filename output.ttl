@@ -2,6 +2,12 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
+<http://data.europa.eu/m8g/ContactPoint> a owl:Class .
+
+<http://data.europa.eu/m8g/Participation> a owl:Class .
+
+<http://data.europa.eu/m8g/PublicEvent> a owl:Class .
+
 <http://data.europa.eu/m8g/accessibility> a rdf:Property,
         owl:DatatypeProperty ;
     rdfs:label "accessibility"@en ;
@@ -24,12 +30,6 @@
         owl:ObjectProperty ;
     rdfs:label "contact point"@en ;
     rdfs:comment "The main contact information of the resource."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
-
-<http://data.europa.eu/m8g/email> a rdf:Property,
-        owl:DatatypeProperty ;
-    rdfs:label "has email"@en ;
-    rdfs:comment "An electronic address through which the Contact Point can be contacted."@en ;
     rdfs:isDefinedBy <http://data.europa.eu/m8g> .
 
 <http://data.europa.eu/m8g/eventNumber> a rdf:Property,
@@ -114,11 +114,5 @@
         owl:ObjectProperty ;
     rdfs:label "sub event"@en ;
     rdfs:comment "A relation towards another Public Event that belong to it."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
-
-<http://data.europa.eu/m8g/telephone> a rdf:Property,
-        owl:DatatypeProperty ;
-    rdfs:label "has telephone"@en ;
-    rdfs:comment "A telephone number through which the Contact Point can be contacted."@en ;
     rdfs:isDefinedBy <http://data.europa.eu/m8g> .
 

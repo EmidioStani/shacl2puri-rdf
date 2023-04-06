@@ -117,8 +117,8 @@ for triple in qres:
     goutput.add(triple)
 for triple in qres2:        
     goutput.add(triple)
-# for triple in qres3:        
-    # goutput.add(triple)
+for triple in qres3:        
+    goutput.add(triple)
 goutput.serialize(destination='output.ttl', format='turtle')
 
 sparql_select_subjects = """

@@ -7,7 +7,7 @@
     <rdfs:label xml:lang="en">accessibility</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:comment xml:lang="en">Information about how the Public Event can be approached, reached or entered, in particular for people with special needs.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g"/>
+    <rdfs:comment xml:lang="en">Information about how the Public Event can be approached, reached or entered, in particular for people with special needs.</rdfs:comment>
   </rdf:Description>
 </rdf:RDF>
