@@ -19,7 +19,7 @@ input:
   shapestart: "#"
   shapeend: "Shape"
 output:
-  folder: output
+  folder: output2
   file: cpsv-ap.xlsx
   classuri: "Class URI"
   prefix: "PREFIX"
