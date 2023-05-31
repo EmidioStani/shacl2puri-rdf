@@ -3,11 +3,11 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
-  <rdf:Description rdf:about="http://data.europa.eu/m8g/contactPoint">
-    <rdfs:label xml:lang="en">contact point</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  <rdf:Description rdf:about="http://data.europa.eu/m8g/gender">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">The main contact information of the resource.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g"/>
+    <rdfs:label xml:lang="en">gender</rdfs:label>
+    <rdfs:comment xml:lang="en">The identities, expressions and societal roles of the Person.</rdfs:comment>
   </rdf:Description>
 </rdf:RDF>

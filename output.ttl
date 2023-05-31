@@ -4,21 +4,7 @@
 
 <http://data.europa.eu/m8g/ContactPoint> a owl:Class .
 
-<http://data.europa.eu/m8g/Participation> a owl:Class .
-
-<http://data.europa.eu/m8g/PublicEvent> a owl:Class .
-
-<http://data.europa.eu/m8g/accessibility> a rdf:Property,
-        owl:DatatypeProperty ;
-    rdfs:label "accessibility"@en ;
-    rdfs:comment "Information about how the Public Event can be approached, reached or entered, in particular for people with special needs."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
-
-<http://data.europa.eu/m8g/audience> a rdf:Property,
-        owl:ObjectProperty ;
-    rdfs:label "audience"@en ;
-    rdfs:comment "The target group of people for whom the Public Event is created."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+<http://data.europa.eu/m8g/GenericDate> a owl:Class .
 
 <http://data.europa.eu/m8g/contactPage> a rdf:Property,
         owl:ObjectProperty ;
@@ -32,87 +18,27 @@
     rdfs:comment "The main contact information of the resource."@en ;
     rdfs:isDefinedBy <http://data.europa.eu/m8g> .
 
-<http://data.europa.eu/m8g/eventNumber> a rdf:Property,
+<http://data.europa.eu/m8g/domicile> a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "domicile"@en ;
+    rdfs:comment "The place that the Person treats as permanent home."@en ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+
+<http://data.europa.eu/m8g/gender> a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "gender"@en ;
+    rdfs:comment "The identities, expressions and societal roles of the Person."@en ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+
+<http://data.europa.eu/m8g/matronymicName> a rdf:Property,
         owl:DatatypeProperty ;
-    rdfs:label "event number"@en ;
-    rdfs:comment "The sequence position of the Public Event."@en ;
+    rdfs:label "matronymic name"@en ;
+    rdfs:comment "Name based on the given name of the Person's mother."@en ;
     rdfs:isDefinedBy <http://data.europa.eu/m8g> .
 
-<http://data.europa.eu/m8g/format> a rdf:Property,
+<http://data.europa.eu/m8g/sex> a rdf:Property,
         owl:ObjectProperty ;
-    rdfs:label "format"@en ;
-    rdfs:comment "A plan of organisation or arrangement of the Public Event."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
-
-<http://data.europa.eu/m8g/frequency> a rdf:Property,
-        owl:ObjectProperty ;
-    rdfs:label "frequency"@en ;
-    rdfs:comment "The recurrence of an instant or period."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
-
-<http://data.europa.eu/m8g/hasNextEvent> a rdf:Property,
-        owl:ObjectProperty ;
-    rdfs:label "has next event"@en ;
-    rdfs:comment "The Public Event that comes after this one."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
-
-<http://data.europa.eu/m8g/hasParticipant> a rdf:Property,
-        owl:ObjectProperty ;
-    rdfs:label "has participant"@en ;
-    rdfs:comment "The Agent involved in the Participation."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
-
-<http://data.europa.eu/m8g/hasParticipation> a rdf:Property,
-        owl:ObjectProperty ;
-    rdfs:label "has participation"@en ;
-    rdfs:comment "The way how a resource is organized."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
-
-<http://data.europa.eu/m8g/hasPreviousEvent> a rdf:Property,
-        owl:ObjectProperty ;
-    rdfs:label "has previous event"@en ;
-    rdfs:comment "The Public Event that comes before this one."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
-
-<http://data.europa.eu/m8g/openingHours> a rdf:Property,
-        owl:ObjectProperty ;
-    rdfs:label "opening hours"@en ;
-    rdfs:comment "The time at which the Contact Point is normally available."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
-
-<http://data.europa.eu/m8g/parentEvent> a rdf:Property,
-        owl:ObjectProperty ;
-    rdfs:label "parent event"@en ;
-    rdfs:comment "A relation to another Public Event that encompasses it."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
-
-<http://data.europa.eu/m8g/participates> a rdf:Property,
-        owl:ObjectProperty ;
-    rdfs:label "participates"@en ;
-    rdfs:comment "The participation in which an Agent is involved."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
-
-<http://data.europa.eu/m8g/registrationPage> a rdf:Property,
-        owl:ObjectProperty ;
-    rdfs:label "registration page"@en ;
-    rdfs:comment "A web page that provides means to attend the Public Event."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
-
-<http://data.europa.eu/m8g/role> a rdf:Property,
-        owl:ObjectProperty ;
-    rdfs:label "role"@en ;
-    rdfs:comment "The function of an Agent within a Participation."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
-
-<http://data.europa.eu/m8g/specialOpeningHoursSpecification> a rdf:Property,
-        owl:ObjectProperty ;
-    rdfs:label "availability restriction"@en ;
-    rdfs:comment "The time during which the Contact Point is not available."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
-
-<http://data.europa.eu/m8g/subEvent> a rdf:Property,
-        owl:ObjectProperty ;
-    rdfs:label "sub event"@en ;
-    rdfs:comment "A relation towards another Public Event that belong to it."@en ;
+    rdfs:label "sex"@en ;
+    rdfs:comment "The organism's biological sex."@en ;
     rdfs:isDefinedBy <http://data.europa.eu/m8g> .
 

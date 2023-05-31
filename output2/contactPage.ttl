@@ -2,9 +2,9 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://data.europa.eu/m8g/contactPoint> a rdf:Property,
+<http://data.europa.eu/m8g/contactPage> a rdf:Property,
         owl:ObjectProperty ;
-    rdfs:label "contact point"@en ;
-    rdfs:comment "The main contact information of the resource."@en ;
+    rdfs:label "contact page"@en ;
+    rdfs:comment "A web page that could be used to reach out the Contact Point."@en ;
     rdfs:isDefinedBy <http://data.europa.eu/m8g> .
 
