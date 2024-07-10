@@ -45,7 +45,7 @@ sparql_datatype_properties = """
 
         ?path rdfs:comment ?desc .
         ?path rdfs:label ?name .
-        ?path rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+        ?path rdfs:isDefinedBy <http://data.europa.eu/it6/> .
 
     }
     WHERE {
@@ -61,8 +61,8 @@ sparql_datatype_properties = """
         OPTIONAL {?sclass shacl:description ?classdesc .} .
         OPTIONAL {?sclass shacl:name ?classname} .
 
-        FILTER (strstarts(str(?path), 'http://data.europa.eu/m8g/'))
-        FILTER (strstarts(str(?class), 'http://data.europa.eu/m8g/'))
+        FILTER (strstarts(str(?path), 'http://data.europa.eu/it6/'))
+        FILTER (strstarts(str(?class), 'http://data.europa.eu/it6/'))
 
 
     }
@@ -75,7 +75,7 @@ sparql_object_properties = """
 
         ?relpath rdfs:comment ?reldesc .
         ?relpath rdfs:label ?relname .
-        ?relpath rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+        ?relpath rdfs:isDefinedBy <http://data.europa.eu/it6/> .
 
     }
     WHERE {
@@ -85,7 +85,7 @@ sparql_object_properties = """
         ?rel shacl:description ?reldesc .
         ?rel shacl:name ?relname .
         ?rel shacl:class ?relclass .
-        FILTER (strstarts(str(?relpath), 'http://data.europa.eu/m8g/'))
+        FILTER (strstarts(str(?relpath), 'http://data.europa.eu/it6/'))
 
     }
 """
@@ -95,6 +95,7 @@ sparql_classes = """
         ?class rdf:type owl:Class .
         ?class rdfs:comment ?classdesc .
         ?class rdfs:label ?classname .
+        ?class rdfs:isDefinedBy <http://data.europa.eu/it6/> .
 
     }
     WHERE {
@@ -102,15 +103,18 @@ sparql_classes = """
         ?sclass shacl:targetClass ?class .
         OPTIONAL {?sclass shacl:description ?classdesc .} .
         OPTIONAL {?sclass shacl:name ?classname} .
-        FILTER (strstarts(str(?class), 'http://data.europa.eu/m8g/'))
+        FILTER (strstarts(str(?class), 'http://data.europa.eu/it6/'))
 
 
     }
 """
 
 qres = g.query(sparql_datatype_properties)
+print(len(qres))
 qres2 = g.query(sparql_object_properties)
+print(len(qres2))
 qres3 = g.query(sparql_classes)
+print(len(qres3))
 
 goutput = Graph()
 for triple in qres:        
