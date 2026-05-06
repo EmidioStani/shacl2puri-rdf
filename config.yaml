@@ -1,25 +1,40 @@
 namespaces:
   adms: http://www.w3.org/ns/adms#
+  biro: http://purl.org/spar/biro/
   cpsv: http://purl.org/vocab/cpsv#
   cv: http://data.europa.eu/m8g/
+  dcat: http://www.w3.org/ns/dcat#
   dct: http://purl.org/dc/terms/
+  dqv: http://www.w3.org/ns/dqv#
   foaf: http://xmlns.com/foaf/0.1/
   geosparql: http://www.opengis.net/ont/geosparql#
+  it6: http://data.europa.eu/it6/
   legal: http://www.w3.org/ns/legal#
   locn: http://www.w3.org/ns/locn#
+  lpwc: https://linkedpaperswithcode.com/property/
+  lpwcc: https://linkedpaperswithcode.com/class/
+  mls: http://www.w3.org/ns/mls#
+  mlso: http://w3id.org/mlso/
+  odrl: http://www.w3.org/ns/odrl/2/
   org: http://www.w3.org/ns/org#
+  owl: http://www.w3.org/2002/07/owl#
   person: http://www.w3.org/ns/person#
   prov: http://www.w3.org/ns/prov#
+  qb: http://purl.org/linked-data/cube#
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
   shacl: http://www.w3.org/ns/shacl#
   skos: http://www.w3.org/2004/02/skos/core#
+  spdx: http://spdx.org/rdf/terms#
   xhv: http://www.w3.org/1999/xhtml/vocab#
+  xsd: http://www.w3.org/2001/XMLSchema#
 input:
   folder: input
   format: ttl
   shapestart: "#"
   shapeend: "Shape"
 output:
-  folder: output6
+  folder: output
   file: cpsv-ap.xlsx
   classuri: "Class URI"
   prefix: "PREFIX"

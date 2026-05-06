@@ -67,6 +67,37 @@ sparql_datatype_properties = """
 
     }
 """
+
+sparql_datatype_properties_literal = """
+    CONSTRUCT {
+        ?path rdf:type rdf:Property .
+        ?path rdf:type owl:DatatypeProperty .
+
+        ?path rdfs:comment ?desc .
+        ?path rdfs:label ?name .
+        ?path rdfs:isDefinedBy <http://data.europa.eu/it6/> .
+
+    }
+    WHERE {
+        ?s rdf:type shacl:NodeShape .
+        ?s shacl:property ?p .
+        ?p shacl:path ?path .
+        ?p shacl:nodeKind shacl:Literal .
+        OPTIONAL {?p shacl:description ?desc . } .
+        ?p shacl:name ?name .
+
+        ?sclass rdf:type shacl:NodeShape .
+        ?sclass shacl:targetClass ?class .
+        OPTIONAL {?sclass shacl:description ?classdesc .} .
+        OPTIONAL {?sclass shacl:name ?classname} .
+
+        FILTER (strstarts(str(?path), 'http:/data.europa.eu/it6/'))
+        FILTER (strstarts(str(?class), 'http:/data.europa.eu/it6/'))
+
+
+    }
+"""
+
 #  ?relpath rdfs:range ?relclass .
 sparql_object_properties = """
     CONSTRUCT {
@@ -85,6 +116,29 @@ sparql_object_properties = """
         ?rel shacl:description ?reldesc .
         ?rel shacl:name ?relname .
         ?rel shacl:class ?relclass .
+        FILTER (strstarts(str(?relpath), 'http://data.europa.eu/it6/'))
+
+    }
+"""
+
+#  ?relpath rdfs:range ?relclass .
+sparql_object_properties2 = """
+    CONSTRUCT {
+        ?relpath rdf:type rdf:Property .
+        ?relpath rdf:type owl:ObjectProperty .
+
+        ?relpath rdfs:comment ?reldesc .
+        ?relpath rdfs:label ?relname .
+        ?relpath rdfs:isDefinedBy <http://data.europa.eu/it6/> .
+
+    }
+    WHERE {
+        ?sclass2 rdf:type shacl:NodeShape .
+        ?sclass2 shacl:property ?rel .
+        ?rel shacl:path ?relpath .
+        OPTIONAL { ?rel shacl:description ?reldesc . } .
+        ?rel shacl:name ?relname .
+        ?rel shacl:nodeKind shacl:BlankNodeOrIRI .
         FILTER (strstarts(str(?relpath), 'http://data.europa.eu/it6/'))
 
     }
@@ -115,6 +169,10 @@ qres2 = g.query(sparql_object_properties)
 print(len(qres2))
 qres3 = g.query(sparql_classes)
 print(len(qres3))
+qres4 = g.query(sparql_datatype_properties_literal)
+print(len(qres4))
+qres5 = g.query(sparql_object_properties2)
+print(len(qres5))
 
 goutput = Graph()
 for triple in qres:        
@@ -122,6 +180,10 @@ for triple in qres:
 for triple in qres2:        
     goutput.add(triple)
 for triple in qres3:        
+    goutput.add(triple)
+for triple in qres4:        
+    goutput.add(triple)
+for triple in qres5:        
     goutput.add(triple)
 goutput.serialize(destination='output.ttl', format='turtle')
 
